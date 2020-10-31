@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="com.uselessoftware.wearapp.views.onBoardingFragment"
+        android:label="on_boarding_fragment"
+        tools:layout="@layout/on_boarding_fragment" >
+        <action
+            android:id="@+id/action_onBoardingFragment_to_salesFragment"
+            app:destination="@id/salesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/salesFragment"
+        android:name="com.uselessoftware.wearapp.views.SalesFragment"
+        android:label="sales_fragment"
+        tools:layout="@layout/sales_fragment" >
+        <action
+            android:id="@+id/action_salesFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_salesFragment_to_favoriteFragment"
+            app:destination="@id/favoriteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.uselessoftware.wearapp.views.SettingsFragment"
+        android:label="settings_fragment"
+        tools:layout="@layout/settings_fragment" />
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.uselessoftware.wearapp.views.SplashFragment"
+        android:label="splash_fragment"
+        tools:layout="@layout/splash_fragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_onBoardingFragment"
+            app:destination="@id/onBoardingFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_salesFragment"
+            app:destination="@id/salesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.uselessoftware.wearapp.views.FavoriteFragment"
+        android:label="favorite_fragment"
+        tools:layout="@layout/favorite_fragment" />
+</navigation>
