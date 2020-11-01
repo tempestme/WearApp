@@ -26,6 +26,12 @@
         <action
             android:id="@+id/action_salesFragment_to_favoriteFragment"
             app:destination="@id/favoriteFragment" />
+        <action
+            android:id="@+id/action_salesFragment_to_favoriteFragment2"
+            app:destination="@id/favoriteFragment" />
+        <action
+            android:id="@+id/action_salesFragment_to_cardDetailFragment"
+            app:destination="@id/cardDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
@@ -48,5 +54,14 @@
         android:id="@+id/favoriteFragment"
         android:name="com.uselessoftware.wearapp.views.FavoriteFragment"
         android:label="favorite_fragment"
-        tools:layout="@layout/favorite_fragment" />
+        tools:layout="@layout/favorite_fragment" >
+        <action
+            android:id="@+id/action_favoriteFragment_to_cardDetailFragment3"
+            app:destination="@id/cardDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cardDetailFragment"
+        android:name="com.uselessoftware.wearapp.views.CardDetailFragment"
+        android:label="card_detail_fragment"
+        tools:layout="@layout/card_detail_fragment" />
 </navigation>
