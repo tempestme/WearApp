@@ -5,6 +5,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 apply plugin: 'kotlin-kapt'
+apply plugin: 'dagger.hilt.android.plugin'
 
 
 android {
@@ -41,6 +42,8 @@ dependencies {
     testImplementation 'junit:junit:4.12'
 
     //network
+    implementation("com.squareup.okhttp3:okhttp:4.9.1")
+    implementation "com.squareup.okhttp3:logging-interceptor:4.0.1"
     implementation 'com.squareup.retrofit2:retrofit:2.6.1'
     implementation 'com.squareup.retrofit2:converter-gson:2.6.1'
 
@@ -51,5 +54,10 @@ dependencies {
 
     //di
     implementation 'com.google.dagger:dagger:2.24'
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hilt_version"
+
+    kapt "com.google.dagger:hilt-compiler:$hilt_version"
+
     kapt 'com.google.dagger:dagger-compiler:2.24'
 }
